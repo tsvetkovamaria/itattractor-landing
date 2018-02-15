@@ -69,7 +69,17 @@ body {
   background: #0d1d2a url(../images/space-bg.jpg) center center no-repeat;
   background-size: cover;
   color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
   padding: 50px 20px;
+}
+.first-screen-galaxy {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  animation: spin 100s linear infinite;
+  z-index: -1;
 }
 .first-screen .description {
   font-size: 20px;
@@ -160,10 +170,24 @@ body {
 .sticky-header {
   display: none;
 }
+
+@keyframes spin {
+  from {transform: rotate(0deg)}
+  to   {transform: rotate(360deg)}
+}
 /*First screen media*/
+@media screen and (min-width: 600px) {
+  .first-screen-galaxy {
+    left: 10%;
+  }
+}
 @media screen and (min-width: 900px) {
   .first-screen {
     padding: 50px 70px;
+  }
+  .first-screen-galaxy {
+    left: auto;
+    right: -30%;
   }
   .main-screen__slider {
     margin-left: 250px;
@@ -180,6 +204,25 @@ body {
   }
 }
 
+@media screen and (min-width: 900px) and (orientation: landscape) {
+  .first-screen {
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .main-screen__slider {
+    margin-bottom: 100px;
+  }
+  .first-screen__contacts {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    padding-right: 70px;
+  }
+}
 
 @media screen and (min-width: 300px) {}
 @media screen and (min-width: 600px) {}
