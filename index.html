@@ -2,27 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <!-- Libraries -->
+  <link rel="stylesheet" href="vendor/slick/slick.css">
+  <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="vendor/slick/slick.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  
+  <script src="js/main.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
-<body>
-  <div class="container-fluid">
-    <div class="first-screen">
-      <header class="header">
-        <a href="#" class="logo">Attractor software logo here</a>
-        <h1 class="description">A high quality software development</h1>
-      </header>
-      <div class="main-buttons">
-        <a href="#" class="btn btn-attach">order the project</a>
-        <div class="social">
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
+
+  <div class="first-screen">
+    <header class="first-screen__header">
+      <a href="#" class="logo">
+        <img src="uploads/logo-white.svg" alt="Attractor software. A high quality software development" width="190" height="34">
+      </a>
+      <h1 class="description">A high quality software development</h1>
+      <button class="btn-primary">Order the project</button>
+    </header>
+    <div class="main-screen__slider">
+      <div class="presentation">
+        <div class="presentation__slide">
+          <h3 class="presentation__title">Developers and teams</h3>
+          <p class="presentation__text">On your request we can allocate a single developer, specialist or a team of developers and analyst to work on your project.</p>
+        </div>
+        <div class="presentaion-slide">
+          <h3 class="presentation__title">Developers and teams</h3>
+          <p class="presentation__text">On your request we can allocate a single developer, specialist or a team of developers and analyst to work on your project.</p>
         </div>
       </div>
     </div>
+    <div class="first-screen__contacts">
+      <a href="#" class="btn btn-attach">
+        <i class="fas fa-file-alt"></i>
+        <span class="btn__text">order the project</span>
+      </a>
+      <div class="social-buttons">
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
   </div>
+  <header class="sticky-header">
+    <a href="#" class="logo"></a>
+    <button class="menu-toggle">
+      <span class="line"></span>
+      <span class="line line-middle"></span>
+      <span class="line"></span>
+    </button>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Portfolio</a>
+      <a href="#">About us</a>
+    </nav>
+  </header>
+
 </body>
 </html>
