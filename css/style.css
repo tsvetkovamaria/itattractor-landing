@@ -76,15 +76,16 @@ body {
 }
 .first-screen-galaxy {
   position: absolute;
-  bottom: 0;
-  left: 50px;
+  top: -700px;
+  left: 0;
+  transform-origin: center center;
   animation: spin 100s linear infinite;
   z-index: -1;
 }
 .first-screen .description {
   font-size: 20px;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 6px 0 10px;
 }
 .first-screen__header {
   padding: 10px 0;
@@ -186,8 +187,10 @@ body {
     padding: 50px 70px;
   }
   .first-screen-galaxy {
+    /*bottom: -20%;*/
+    /*left: auto;*/
     left: auto;
-    right: -30%;
+    right: -50%;
   }
   .main-screen__slider {
     margin-left: 250px;
@@ -210,9 +213,6 @@ body {
     box-sizing: border-box;
     position: relative;
   }
-  .main-screen__slider {
-    margin-bottom: 100px;
-  }
   .first-screen__contacts {
     position: absolute;
     width: 100%;
@@ -221,6 +221,16 @@ body {
     left: 0;
     right: 0;
     padding-right: 70px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .first-screen-galaxy {
+    right: -600px
+  }
+}
+@media screen and (min-width: 1800px) {
+  .first-screen-galaxy {
+    right: -400px;
   }
 }
 
