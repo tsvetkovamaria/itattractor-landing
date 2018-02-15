@@ -187,10 +187,8 @@ body {
     padding: 50px 70px;
   }
   .first-screen-galaxy {
-    /*bottom: -20%;*/
-    /*left: auto;*/
     left: auto;
-    right: -50%;
+    right: -1100px;
   }
   .main-screen__slider {
     margin-left: 250px;
