@@ -28,6 +28,7 @@ body {
   font-family: 'PT Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   margin: 0;
+  min-width: 320px;
 }
 
 .container {
@@ -50,20 +51,20 @@ body {
   display: inline-block;
   border: 2px solid #fff;
   border-radius: 30px;
-  font-size: 18px;
   line-height: 38px;
+  font-size: 14px;
+  font-family: inherit;
   font-weight: bold;
   background: #53ae50;
   padding: 0 18px;
   text-transform: uppercase;
   text-decoration: none;
 }
-.btn__text {
-  display: inline-block;
-  margin-left: 5px;
-  font-size: 14px;
-
+.btn svg {
+  font-size: 18px;
+  margin-right: 5px;
 }
+
 .first-screen {
   background: #0d1d2a url(../images/space-bg.jpg) center center no-repeat;
   background-size: cover;
@@ -77,16 +78,23 @@ body {
 }
 .first-screen__header {
   padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
-.first-screen__header .btn-primary {
+.first-screen__header .logo {
+  min-width: 250px;
+  display: inline-block;
+}
+.first-screen__header .btn {
   display: none;
 }
-.first-screen__contacts {}
 .main-screen__slider {
-  margin: 60px 0 80px;
+  margin: 60px 0 80px 0;
 }
 .presentation {
   margin: 0;
+  max-width: 600px;
 }
 .presentation__slide {
   margin-bottom: 60px;
@@ -135,6 +143,7 @@ body {
 .social-buttons {
   display: flex;
   flex-wrap: nowrap;
+
 }
 .social-buttons a {
   display: inline-block;
@@ -151,8 +160,30 @@ body {
 .sticky-header {
   display: none;
 }
+/*First screen media*/
+@media screen and (min-width: 900px) {
+  .first-screen {
+    padding: 50px 70px;
+  }
+  .main-screen__slider {
+    margin-left: 250px;
+  }
+  .first-screen__header .btn {
+    display: block;
+    margin-left: auto;
+  }
+  .first-screen__contacts .btn {
+    display: none;
+  }
+  .first-screen__contacts .social-buttons {
+    margin-left: auto;
+  }
+}
+
 
 @media screen and (min-width: 300px) {}
 @media screen and (min-width: 600px) {}
 @media screen and (min-width: 900px) {}
 @media screen and (min-width: 1200px) {}
+
+
