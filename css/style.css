@@ -496,7 +496,10 @@ ul.list li::before {
 .prices {
   background: #14202b;
   color: #fff;
-  padding: 30px 0 5;
+  padding: 30px 0 50px;
+}
+.prices .call-to-action {
+  line-height: 2;
 }
 .prices_title {
   margin-bottom: 25px;
@@ -569,3 +572,31 @@ ul.list li::before {
   }
 }
 @media screen and (min-width: 900px){}
+
+.portfolio {
+  padding: 50px 0;
+}
+.portfolio-slider {
+  margin: 0 -20px 30px;
+}
+.portfolio_title {
+  margin-bottom: 30px;
+}
+.portfolio .dots-dark {
+  justify-content: center;
+}
+.portfolio-project {
+  padding-bottom: 40px;
+}
+.portfolio-project img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.portfolio-project_title {
+
+}
+.portfolio-project_text {
+
+}

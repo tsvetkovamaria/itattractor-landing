@@ -38,12 +38,34 @@ $(document).ready(function(){
           slidesToScroll: 1,
           dots: false
         }
-
       },
-      
-      
     ]
   });
+
+
+  $('.portfolio-slider').slick({
+    autoplay: true,
+    arrows: false,
+    dots: true,
+    dotsClass: 'dots-dark',
+    mobileFirst: true,
+    responsive: [
+      { 
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      { 
+        breakpoint: 900,
+        settings:  {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+    ]
+  })
 
   // mobile menu
   // make sure mobile menu is hidden on first appearance on mobile screens
