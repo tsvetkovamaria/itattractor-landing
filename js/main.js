@@ -13,9 +13,36 @@ $(document).ready(function(){
     arrows: false,
     dots: true,
     dotsClass: 'dots-dark',
-    modileFirst: true,
-    slidesToShow: 2,
-    slidesToScroll: 1
+    mobileFirst: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      { 
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      { 
+        breakpoint: 900,
+        settings:  {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          dots: false
+        }
+
+      },
+      
+      
+    ]
   });
 
   // mobile menu

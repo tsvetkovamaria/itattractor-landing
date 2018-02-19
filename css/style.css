@@ -41,8 +41,8 @@ body {
   padding: 20px;
 }
 
-.h1 {font-size: 40px;line-height: 48px; font-weight: bold; margin-bottom: 20px}
-.h2 {font-size: 25px; margin-bottom: 10px; font-weight: bold;}
+.h1 {font-size: 40px;line-height: 48px; font-weight: bold; margin-bottom: 43px}
+.h2 {font-size: 24px; margin-bottom: 24px; font-weight: bold;}
 .h3 {}
 .h4 {font-weight: bold; font-size: 16px;}
 .h5 {}
@@ -398,7 +398,7 @@ ul.list li::before {
 .company-statistics_number {
   font-weight: bold;
   margin: 11px 0 3px;
-  font-size: 21px;
+  font-size: 24px;
 }
 .company-statistics_text {}
 @media screen and ( min-width: 900px) {
@@ -433,7 +433,10 @@ ul.list li::before {
   width: 100%;
 }
 .company-standards_text {
-  line-height: 1.6;
+  line-height: 1.5;
+}
+.company-standards .list {
+  margin-bottom: 40px;
 }
 .technology-block {}
 .technology-block .list  {
@@ -448,18 +451,28 @@ ul.list li::before {
   left: 0;
   width: 100%;
   height: 40%;
-  background: white;
-  opacity: 0.5;
+  background: transparent;
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
 }
 .technology-block .list li {
   font-weight: bold;  
   margin-bottom: 0;
 }
+.technology-slider {
+  margin-top: 18px;
+}
+
 .services {
   text-align: center;
 }
+.services_title {
+  margin-bottom: 32px;
+}
 .services-wrap {
-  margin: 0 -40px;
+  margin: 0 -20px;
 }
 .services-block {
   text-align: center;
@@ -469,7 +482,7 @@ ul.list li::before {
   background: #eee;
 }
 .services-block_title {
-  margin: 20px 0;
+  margin: 15px 0;
 }
 @media screen and (min-width: 600px) {
   .services-wrap {
