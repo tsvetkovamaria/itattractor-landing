@@ -35,6 +35,7 @@ body {
   padding: 20px;
   min-width: 300px;
   max-width: 1320px;
+  margin: 0 auto;
 }
 .container-fluid {
   padding: 20px;
@@ -250,7 +251,10 @@ body {
   position: relative;
 }
 .sticky-header .logo {
-  min-width: 250px;
+  width: 150px;
+}
+.sticky-header .logo img {
+  width: 100%;
 }
 .menu-toggle {
   display: inline-block;
@@ -311,6 +315,12 @@ body {
 
 }
 @media screen and (min-width: 900px) {
+  .sticky-header .logo {
+    width: 250px;
+  }
+  .sticky-header .logo img {
+    width: 100%;
+  }
   .sticky-header .btn-round {
     display: none;
   }
@@ -337,6 +347,49 @@ body {
     display: none;
   }
 }
-@media screen and (min-width: 1200px) {}
-
-
+/* Brief company description  */
+.company-brief {
+  background: url(../images/map.svg) center top/100% auto no-repeat ;
+}
+.company-summary {
+  padding-top: 25%;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.company-summary p {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+.company-statistics {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.company-statistics_item {min-width: 150px; margin-bottom: 33px;}
+.company-statistics_number {
+  font-weight: bold;
+  margin: 11px 0 3px;
+  font-size: 21px;
+}
+.company-statistics_text {}
+@media screen and ( min-width: 900px) {
+  .company-brief {
+    background-position: right top;
+    background-size: 55% auto;
+  }
+  .company-summary{
+    padding-top: 120px;
+    padding-bottom: 100px;
+    max-width: 550px;
+    text-align: left;
+  }
+  .company-statistics_item {
+    display: flex;
+    text-align: left;
+    align-items: flex-end;
+  }
+  .company-statistics_image {
+    margin-right: 20px;
+  }
+}
