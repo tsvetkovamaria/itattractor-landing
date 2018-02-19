@@ -455,3 +455,27 @@ ul.list li::before {
   font-weight: bold;  
   margin-bottom: 0;
 }
+.services {
+  text-align: center;
+}
+.services-wrap {
+  margin: 0 -40px;
+}
+.services-block {
+  text-align: center;
+  padding: 40px;
+}
+.services-block:nth-child(2n+1){
+  background: #eee;
+}
+.services-block_title {
+  margin: 20px 0;
+}
+@media screen and (min-width: 600px) {
+  .services-wrap {
+    display: flex;
+  }
+  .services-block {
+    flex-basis: 33.3%;
+  }
+}
