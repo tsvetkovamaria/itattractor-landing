@@ -8,6 +8,16 @@ $(document).ready(function(){
     mobileFirst: true    
   });
 
+  $('.technology-slider').slick({
+    autoplay: true,
+    arrows: false,
+    dots: true,
+    dotsClass: 'dots-dark',
+    modileFirst: true,
+    slidesToShow: 2,
+    slidesToScroll: 1
+  });
+
   // mobile menu
   // make sure mobile menu is hidden on first appearance on mobile screens
   var itaLanding = {
