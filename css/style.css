@@ -64,7 +64,17 @@ body {
   font-size: 18px;
   margin-right: 5px;
 }
-
+.btn-round {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.btn-round svg {
+  margin-right: 0;
+  margin-left: 3px;
+}
 .first-screen {
   background: #0d1d2a url(../images/space-bg.jpg) center center no-repeat;
   background-size: cover;
@@ -168,9 +178,6 @@ body {
   opacity: 1;
   transform: scale(1.3);
 }
-.sticky-header {
-  display: none;
-}
 
 @keyframes spin {
   from {transform: rotate(0deg)}
@@ -232,9 +239,104 @@ body {
   }
 }
 
-@media screen and (min-width: 300px) {}
-@media screen and (min-width: 600px) {}
-@media screen and (min-width: 900px) {}
+
+.sticky-header {
+  display: block;
+  background: #efefef;
+  padding: 7px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.sticky-header .logo {
+  min-width: 250px;
+}
+.menu-toggle {
+  display: inline-block;
+  background: transparent;
+  width: 20px;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin-left: 30px;
+}
+.menu-toggle .line {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #000;
+  margin: 4px 0;
+}
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #efefef;
+}
+.menu a{
+  display: block;
+  border-bottom: 1px solid #ccc;
+  line-height: 1;
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+}
+.menu a:hover {
+  background: #ccc;
+}
+.menu a.active {
+  text-decoration: none;
+  color: #91a3b4;
+}
+.menu-toggle .line {
+  transform-origin: center center;
+  transition: all .3s;
+}
+.menu-toggle.open .line:first-child  { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.open .line:nth-child(2) { opacity: 0 }
+.menu-toggle.open .line:last-child   { transform: translateY(-7px) rotate(-45deg); }
+
+.sticky-header .btn-round {
+  margin-left: auto;
+}
+.sticky-header .btn-attach {
+  display: none;
+}
+@media screen and (min-width: 300px) {
+
+}
+@media screen and (min-width: 600px) {
+
+}
+@media screen and (min-width: 900px) {
+  .sticky-header .btn-round {
+    display: none;
+  }
+  .sticky-header .btn-attach {
+    display: inline-block;
+  }
+  .sticky-header .menu {
+    position: static;
+    margin-right: auto;
+  }
+  .sticky-header .menu a {
+    display: inline-block;
+    padding: 0 10px;
+    text-decoration: underline;
+    border-bottom: none;
+  }
+  .sticky-header .menu a:hover,
+  .sticky-header .menu a.active {
+    background: transparent;
+    text-decoration: none;
+    color: #91a3b4;
+  }
+  .sticky-header .menu-toggle {
+    display: none;
+  }
+}
 @media screen and (min-width: 1200px) {}
 
 
