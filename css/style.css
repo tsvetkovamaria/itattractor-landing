@@ -277,7 +277,10 @@ ul.list li::before {
   }
 }
 
-
+.sticky-header-wrap {
+  position: relative;
+  min-height: 50px;
+}
 .sticky-header {
   display: block;
   background: #efefef;
@@ -285,7 +288,14 @@ ul.list li::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.sticky-header.sticked {
+  position: fixed;
+  z-index: 1000;
 }
 .sticky-header .logo {
   width: 150px;

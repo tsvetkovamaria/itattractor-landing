@@ -110,9 +110,40 @@ $(document).ready(function(){
 
   $(document).click(function(e) {
     var targetIsMenuOrButton = $(e.target).closest('.menu').length || !$(e.target).closest('.menu-toggle').length;
-    if(targetIsMenuOrButton) {
+    if(targetIsMenuOrButton && window.outerWidth < itaLanding.mobileMenuBreakpoint) {
       itaLanding.hideMenu();
       itaLanding.toggleButton.removeClass('open');
     }
   })
+  itaLanding.stickyHeader = $('.sticky-header');
+
+  itaLanding.toggleStickyMenu = function(e) {
+    var isScrollEnough = window.pageYOffset > (window.outerHeight-10);
+    if(isScrollEnough) {
+      itaLanding.stickyHeader.hide().addClass('sticked').show();
+    } else {
+      itaLanding.stickyHeader.removeClass('sticked');
+    }
+  }
+  $(window).scroll(function(e){
+    itaLanding.toggleStickyMenu();
+  })
+  itaLanding.toggleStickyMenu();
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
