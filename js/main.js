@@ -75,7 +75,7 @@ $(document).ready(function(){
   var itaLanding = {
     mobileMenu: $('.menu'),
     toggleButton: $('.menu-toggle'),
-    mobileMenuBreakpoint: 900
+    mobileMenuBreakpoint: 1000
   }
   itaLanding.hideMenu = function(e){
     itaLanding.mobileMenu.hide();
@@ -107,4 +107,12 @@ $(document).ready(function(){
   $(window).resize(function(e){
     itaLanding.toggleMenuOnWindowResize();
   });
+
+  $(document).click(function(e) {
+    var targetIsMenuOrButton = $(e.target).closest('.menu').length || !$(e.target).closest('.menu-toggle').length;
+    if(targetIsMenuOrButton) {
+      itaLanding.hideMenu();
+      itaLanding.toggleButton.removeClass('open');
+    }
+  })
 });
