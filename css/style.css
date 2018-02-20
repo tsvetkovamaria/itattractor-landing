@@ -494,7 +494,8 @@ ul.list li::before {
   }
 }
 .prices {
-  background: #14202b;
+  background: #14202b url(../images/lines-bg.jpg) center top no-repeat;
+  background-size: cover;
   color: #fff;
   padding: 30px 0 50px;
 }
@@ -507,6 +508,7 @@ ul.list li::before {
 .prices .description {
   line-height: 1.5;
   margin-bottom: 25px;
+  max-width: 820px;
 }
 .prices-wrap {
   text-align: center;
