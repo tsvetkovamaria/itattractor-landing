@@ -5,7 +5,9 @@ $(document).ready(function(){
     arrows: false,
     dots: true,
     dotsClass: 'dots',
-    mobileFirst: true    
+    mobileFirst: true,
+    speed: 500,
+    fade: true   
   });
 
   $('.technology-slider').slick({
