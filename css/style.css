@@ -654,12 +654,13 @@ ul.list li::before {
 }
 .footer_content {
   display: flex;
+  flex-wrap: wrap;
   line-height: 30px;
   align-items: flex-start;
   justify-content: space-between;
 }
-.footer_social {
-  margin-left: auto;
+.footer_contacts {
+  margin-right: auto;
 }
 .footer_copyright {
   color: #91a3b4;
