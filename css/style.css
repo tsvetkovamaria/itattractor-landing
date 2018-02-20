@@ -634,3 +634,39 @@ ul.list li::before {
     width: 50vw;
   }
 }
+
+.footer {
+  border-top: 2px solid #ccc;
+  padding: 20px 0;
+}
+.footer_contacts a {
+  display: inline-block;
+  margin-right: 30px;
+  color: inherit;
+}
+.footer_contacts svg {
+  color: #53ae50;
+  margin-right: 8px;
+}
+.footer_contacts .phone {
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer_content {
+  display: flex;
+  line-height: 30px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footer_social {
+  margin-left: auto;
+}
+.footer_copyright {
+  color: #91a3b4;
+}
+.footer_social a {
+  margin-top: 0;
+}
+.footer_social .fb {color: #4267B2}
+.footer_social .insta {color: #E54557}
+.footer_social .linkedin { color: #0077B5 }
