@@ -26,11 +26,16 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   font-family: 'PT Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 16px;
   margin: 0;
+  font-size: 16px;
   min-width: 320px;
 }
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
 
+}
 .container {
   padding: 20px;
   min-width: 300px;
@@ -44,7 +49,7 @@ body {
 .h1 {font-size: 40px;line-height: 48px; font-weight: bold; margin-bottom: 43px}
 .h2 {font-size: 24px; margin-bottom: 24px; font-weight: bold;}
 .h3 {}
-.h4 {font-weight: bold; font-size: 16px;}
+.h4 {font-weight: bold; font-size: 18px;}
 .h5 {}
 
 ul.list {
@@ -218,7 +223,7 @@ ul.list li::before {
     left: 10%;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
   .first-screen {
     padding: 50px 70px;
   }
@@ -239,9 +244,12 @@ ul.list li::before {
   .first-screen__contacts .social-buttons {
     margin-left: auto;
   }
+  .sticky-header .btn {
+    margin-right: 40px;
+  }
 }
 
-@media screen and (min-width: 900px) and (orientation: landscape) {
+@media screen and (min-width: 1000px) and (orientation: landscape) {
   .first-screen {
     min-height: 100vh;
     box-sizing: border-box;
@@ -257,6 +265,7 @@ ul.list li::before {
     padding-right: 70px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .first-screen-galaxy {
     right: -600px
@@ -458,7 +467,6 @@ ul.list li::before {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
 }
 .technology-block .list li {
-  font-weight: bold;  
   margin-bottom: 0;
 }
 .technology-slider {
