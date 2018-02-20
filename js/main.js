@@ -44,9 +44,10 @@ $(document).ready(function(){
 
 
   $('.portfolio-slider').slick({
-    autoplay: true,
+    autoplay: false,
     arrows: false,
     dots: true,
+    variableWidth: true,
     dotsClass: 'dots-dark',
     mobileFirst: true,
     responsive: [
@@ -61,7 +62,7 @@ $(document).ready(function(){
         breakpoint: 900,
         settings:  {
           slidesToShow: 3,
-          slidesToScroll: 1
+          slidesToScroll: 2
         }
       },
     ]
