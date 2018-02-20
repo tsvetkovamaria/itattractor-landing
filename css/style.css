@@ -59,13 +59,13 @@ ul.list {
 }
 ul.list li {
   position: relative;
-  padding-left: 25px;
+  padding-left: 20px;
   line-height: 1.6;
   margin-bottom: 10px;
 }
 ul.list li::before {
   content: "";
-  background: url(../images/icon-tick.svg) center center/13px 10px no-repeat;
+  background: url(../images/icon-tick.svg) center center/11px 10px no-repeat;
   width: 16px;
   height: 10px;
   position: absolute;
@@ -367,6 +367,7 @@ ul.list li::before {
   .sticky-header .menu {
     position: static;
     margin-right: auto;
+    margin-top: -4px;
   }
   .sticky-header .menu a {
     display: inline-block;
@@ -411,6 +412,10 @@ ul.list li::before {
 }
 .company-statistics_text {}
 @media screen and ( min-width: 600px) {
+  .company-summary {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
   .company-statistics_item {
     flex-basis: 50%;
   }
@@ -418,24 +423,37 @@ ul.list li::before {
 @media screen and ( min-width: 900px) {
   .company-brief {
     background-position: right top;
-    background-size: 55% auto;
+    background-size: 70% auto;
   }
   .company-summary{
     padding-top: 120px;
     padding-bottom: 100px;
-    max-width: 550px;
+    max-width: 500px;
     text-align: left;
+    margin-right: 0;
+    margin-left: 0;
   }
   .company-statistics {
     flex-wrap: nowrap;
+
   }
   .company-statistics_item {
     display: flex;
     text-align: left;
     align-items: flex-end;
+    flex-basis: 25%;
+    box-sizing: border-box;
+    margin-left: 50px;
   }
   .company-statistics_image {
     margin-right: 20px;
+  }
+  .company-statistics_number { 
+    font-size: 50px;
+    line-height: 1;
+  }
+  .company-statistics_text {
+    font-size: 18px;
   }
 }
 
