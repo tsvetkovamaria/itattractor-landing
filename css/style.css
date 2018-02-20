@@ -410,6 +410,11 @@ ul.list li::before {
   font-size: 24px;
 }
 .company-statistics_text {}
+@media screen and ( min-width: 600px) {
+  .company-statistics_item {
+    flex-basis: 50%;
+  }
+}
 @media screen and ( min-width: 900px) {
   .company-brief {
     background-position: right top;
@@ -420,6 +425,9 @@ ul.list li::before {
     padding-bottom: 100px;
     max-width: 550px;
     text-align: left;
+  }
+  .company-statistics {
+    flex-wrap: nowrap;
   }
   .company-statistics_item {
     display: flex;
