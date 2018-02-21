@@ -14,7 +14,8 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -115,8 +116,10 @@ ul.list li::before {
   position: absolute;
   top: -700px;
   left: 0;
-  transform-origin: center center;
-  animation: spin 760s linear infinite;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation: spin 760s linear infinite;
+          animation: spin 760s linear infinite;
   z-index: -1;
 }
 .first-screen .description {
@@ -126,9 +129,14 @@ ul.list li::before {
 }
 .first-screen__header {
   padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .first-screen__header .logo {
   min-width: 250px;
@@ -158,6 +166,8 @@ ul.list li::before {
 }
 .dots,
 .dots-dark {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
   padding: 0;
@@ -174,6 +184,7 @@ ul.list li::before {
   border: 2px solid #fff;
   border-radius: 50%;
   background: transparent;   
+  -webkit-transition: all .3s;   
   transition: all .3s; 
 }
 .dots-dark li {
@@ -183,21 +194,32 @@ ul.list li::before {
 .dots-dark .slick-active { 
   border-color: #53ae50;
   background: #53ae50;   
-  transform: scale(1.4); 
+  -webkit-transform: scale(1.4);   
+          transform: scale(1.4); 
 }
 .dots button,
 .dots-dark button {
   display: none
 }
 .first-screen__contacts {
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .social-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 
 }
 .social-buttons a {
@@ -206,16 +228,23 @@ ul.list li::before {
   font-size: 18px;
   margin: 20px 0 20px 20px;
   opacity: .9;
+  -webkit-transition: all .3s;
   transition: all .3s;
 }
 .social-buttons a:hover {
   opacity: 1;
-  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+@-webkit-keyframes spin {
+  from {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+  to   {-webkit-transform: rotate(360deg);transform: rotate(360deg)}
 }
 
 @keyframes spin {
-  from {transform: rotate(0deg)}
-  to   {transform: rotate(360deg)}
+  from {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+  to   {-webkit-transform: rotate(360deg);transform: rotate(360deg)}
 }
 /*First screen media*/
 @media screen and (min-width: 600px) {
@@ -252,13 +281,15 @@ ul.list li::before {
 @media screen and (min-width: 1000px) and (orientation: landscape) {
   .first-screen {
     min-height: 100vh;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     position: relative;
   }
   .first-screen__contacts {
     position: absolute;
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     bottom: 30px;
     left: 0;
     right: 0;
@@ -285,9 +316,15 @@ ul.list li::before {
   display: block;
   background: #efefef;
   padding: 7px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   top: 0;
   right: 0;
@@ -342,12 +379,14 @@ ul.list li::before {
   color: #91a3b4;
 }
 .menu-toggle .line {
-  transform-origin: center center;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: all .3s;
   transition: all .3s;
 }
-.menu-toggle.open .line:first-child  { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.open .line:first-child  { -webkit-transform: translateY(7px) rotate(45deg); transform: translateY(7px) rotate(45deg); }
 .menu-toggle.open .line:nth-child(2) { opacity: 0 }
-.menu-toggle.open .line:last-child   { transform: translateY(-7px) rotate(-45deg); }
+.menu-toggle.open .line:last-child   { -webkit-transform: translateY(-7px) rotate(-45deg); transform: translateY(-7px) rotate(-45deg); }
 
 .sticky-header .btn-round {
   margin-left: auto;
@@ -410,9 +449,13 @@ ul.list li::before {
 }
 .company-statistics {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .company-statistics_item {min-width: 150px; margin-bottom: 33px;}
 .company-statistics_number {
@@ -427,7 +470,8 @@ ul.list li::before {
     margin-left: 100px;
   }
   .company-statistics_item {
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 }
 @media screen and ( min-width: 900px) {
@@ -444,15 +488,22 @@ ul.list li::before {
     margin-left: 0;
   }
   .company-statistics {
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
 
   }
   .company-statistics_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     text-align: left;
-    align-items: flex-end;
-    flex-basis: 25%;
-    box-sizing: border-box;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin-left: 50px;
   }
   .company-statistics_image {
@@ -484,7 +535,9 @@ ul.list li::before {
 }
 .technology-block .dots,
 .technology-slider .dots-dark {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .technology-block .h4 {
   margin-bottom: 20px;
@@ -502,8 +555,7 @@ ul.list li::before {
   width: 100%;
   height: 40%;
   background: transparent;
-  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 100%);
-  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)),to(rgba(255,255,255,0.7)));
   background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
 }
@@ -522,11 +574,18 @@ ul.list li::before {
 }
 @media screen and (min-width: 900px) {
   .company-standards_block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .company-standards_block.reverse {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
   .company-standards_image-wrap {
     margin-right: 50px;
@@ -560,10 +619,13 @@ ul.list li::before {
 }
 @media screen and (min-width: 600px) {
   .services-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .services-block {
-    flex-basis: 33.3%;
+    -ms-flex-preferred-size: 33.3%;
+        flex-basis: 33.3%;
   }
 }
 .prices {
@@ -585,16 +647,22 @@ ul.list li::before {
 }
 .prices-wrap {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-top: 31px;
   padding-bottom: 33px;
 }
 .price-block {
-  flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   padding: 20px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   max-width: 300px;
   min-width: 200px;
   margin-bottom: 14px;
@@ -643,7 +711,8 @@ ul.list li::before {
 @media screen and (min-width: 600px){}
 @media screen and (min-width: 900px){
   .price-block {
-    flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
   }
 }
 @media screen and (min-width: 900px){}
@@ -658,7 +727,9 @@ ul.list li::before {
   margin-bottom: 30px;
 }
 .portfolio .dots-dark {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .portfolio-project {
   padding-bottom: 40px;
@@ -708,11 +779,18 @@ ul.list li::before {
   text-decoration: none;
 }
 .footer_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   line-height: 30px;
-  align-items: flex-start;
-  justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .footer_contacts {
   margin-right: auto;
@@ -768,8 +846,10 @@ ul.list li::before {
   height: 50px;
   background: #fff;
   z-index: -1;
-  transform: skewY(-4deg);
-  transform-origin: left bottom;
+  -webkit-transform: skewY(-4deg);
+          transform: skewY(-4deg);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
 }
 .modal-close {
   position: absolute;
@@ -791,7 +871,8 @@ ul.list li::before {
   display: block;
   width: 100%;
   background: #e4e8ee;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: none;
   border-bottom: 2px solid #0079c4;
   margin-bottom: 15px;
@@ -825,7 +906,8 @@ input.input {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   .modal-close {
     top: -30px;
