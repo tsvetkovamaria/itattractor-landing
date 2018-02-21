@@ -19,28 +19,28 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [
-      {
-        breakpoint: 400,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      },
-      { 
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        }
-      },
-      { 
-        breakpoint: 900,
-        settings:  {
-          slidesToShow: 5,
-          slidesToScroll: 1,
-          dots: false
-        }
-      },
+    {
+      breakpoint: 400,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    { 
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      }
+    },
+    { 
+      breakpoint: 900,
+      settings:  {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: false
+      }
+    },
     ]
   });
 
@@ -53,20 +53,20 @@ $(document).ready(function(){
     dotsClass: 'dots-dark',
     mobileFirst: true,
     responsive: [
-      { 
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      },
-      { 
-        breakpoint: 900,
-        settings:  {
-          slidesToShow: 3,
-          slidesToScroll: 2
-        }
-      },
+    { 
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    { 
+      breakpoint: 900,
+      settings:  {
+        slidesToShow: 3,
+        slidesToScroll: 2
+      }
+    },
     ]
   })
 
@@ -116,19 +116,31 @@ $(document).ready(function(){
     }
   })
   itaLanding.stickyHeader = $('.sticky-header');
+  itaLanding.minHeightForScroll = window.outerHeight-10;
 
   itaLanding.toggleStickyMenu = function(e) {
-    var isScrollEnough = window.pageYOffset > (window.outerHeight-10);
+    var isScrollEnough = window.pageYOffset > itaLanding.minHeightForScroll;
     if(isScrollEnough) {
       itaLanding.stickyHeader.hide().addClass('sticked').show();
     } else {
       itaLanding.stickyHeader.removeClass('sticked');
     }
   }
-  $(window).scroll(function(e){
+  itaLanding.didScroll = false;
+  itaLanding.toggleStickyHeader = function() {
+    itaLanding.didScroll = true;
     itaLanding.toggleStickyMenu();
-  })
-  itaLanding.toggleStickyMenu();
+
+  }
+  window.onscroll = itaLanding.toggleStickyHeader;
+ 
+  // debounce scroll event
+  setInterval(function() {
+    if(itaLanding.didScroll) {
+      itaLanding.didScroll = false;
+    }
+  }, 100);
+
 
   // Modal
   itaLanding.orderModal = $('.modal');
