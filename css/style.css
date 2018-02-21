@@ -245,7 +245,7 @@ ul.list li::before {
     margin-left: auto;
   }
   .sticky-header .btn {
-    margin-right: 40px;
+    margin-right: 50px;
   }
 }
 
@@ -470,7 +470,6 @@ ul.list li::before {
 .company-standards {}
 .company-standards_image-wrap {
   margin: 0 -20px 20px;
-  max-width: 500px;
   text-align: center;
 }
 .company-standards_image {
@@ -483,7 +482,13 @@ ul.list li::before {
 .company-standards .list {
   margin-bottom: 40px;
 }
-.technology-block {}
+.technology-block .dots,
+.technology-slider .dots-dark {
+  justify-content: center;
+}
+.technology-block .h4 {
+  margin-bottom: 20px;
+}
 .technology-block .list  {
   position: relative;
   margin: 0;
@@ -508,7 +513,13 @@ ul.list li::before {
 .technology-slider {
   margin-top: 18px;
 }
-
+@media screen and (min-width: 600px) {
+  .company-standards_image-wrap {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 @media screen and (min-width: 900px) {
   .company-standards_block {
     display: flex;
