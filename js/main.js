@@ -130,6 +130,16 @@ $(document).ready(function(){
   })
   itaLanding.toggleStickyMenu();
 
+  // Modal
+  itaLanding.orderModal = $('.modal');
+  itaLanding.modalToggler = $('[data-toggle="modal"]');
+  itaLanding.modalToggler.click(function(e){
+    e.preventDefault();
+    // if(itaLanding.orderModal.is(':visible')){
+      itaLanding.orderModal.fadeToggle();
+      $('body').toggleClass('is-modal-open');
+    // }
+  })
 });
 
 

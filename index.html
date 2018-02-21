@@ -26,7 +26,7 @@
       <img src="uploads/logo-white.svg" alt="Attractor software. A high quality software development" width="190" height="34">
     </a>
     <h1 class="description">A high quality software development</h1>
-    <button class="btn">Order the project</button>
+    <button class="btn" data-toggle="modal">Order the project</button>
   </header>
   <div class="main-screen__slider">
     <div class="presentation">
@@ -45,7 +45,7 @@
     </div>
   </div>
   <div class="first-screen__contacts">
-    <a href="#" class="btn btn-attach">
+    <a href="#" class="btn btn-attach" data-toggle="modal">
       <i class="fas fa-file-alt"></i>
       order the project
     </a>
@@ -66,7 +66,7 @@
       <a href="#portfolio">Portfolio</a>
       <a href="#prices">Prices</a>
     </nav>
-    <a href="#" class="btn btn-attach">
+    <a href="#" class="btn btn-attach" data-toggle="modal">
       order the project
     </a>
     <a href="#" class="btn btn-round">
@@ -293,7 +293,7 @@
         <p>Please request a quote</p>
       </div>
     </div>
-    <p class="call-to-action">Please <a href="#" class="btn-outline">Fill the form</a> to negotiate the best offer for your project</p>
+    <p class="call-to-action"><a href="#" class="btn-outline"  data-toggle="modal">Fill the form</a> to negotiate the best offer for your project</p>
   </div>
 </div>
 <div id='portfolio' class="container">
@@ -395,5 +395,30 @@
     </div>
   </div>
 </footer>
+<div class="modal">
+  <div class="modal-overlay" data-toggle="modal"></div>
+  <div class="modal-content">
+    <span class="modal-close" data-toggle="modal">
+      <i class="fas fa-times"></i>
+    </span>
+    <div class="modal-title">
+      <img src="images/icon-code.svg" alt="">
+      <h2>Оrder the project</h2>
+    </div>
+    <form class="modal-form">
+      <input type="text" class="input" placeholder="Name">
+      <input type="text" class="input" placeholder="Contact phone or email">
+      <textarea cols="30" rows="5" class="input" placeholder="Something about your project"></textarea>
+      <label class="input-file">
+        <span class="input-file_text">
+          <i class="fas fa-paperclip"></i>
+          <span>Add file</span>
+        </span>
+        <input type="file">
+      </label>
+      <button class="btn" type="submit">Send</button>
+    </form>
+  </div>
+</div>
 </body>
 </html>
