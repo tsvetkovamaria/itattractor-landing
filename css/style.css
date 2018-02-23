@@ -62,15 +62,15 @@ ul.list li {
   position: relative;
   padding-left: 20px;
   line-height: 1.6;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 ul.list li::before {
   content: "";
-  background: url(../images/icon-tick.svg) center center/11px 10px no-repeat;
+  background: url(../images/icon-tick.svg) top left/11px 7px no-repeat;
   width: 16px;
   height: 10px;
   position: absolute;
-  top: 7px;
+  top: 10px;
   left: 0;
 }
 
@@ -280,20 +280,9 @@ ul.list li::before {
 
 @media screen and (min-width: 1000px) and (orientation: landscape) {
   .first-screen {
-    min-height: 100vh;
-    -webkit-box-sizing: border-box;
+    /*-webkit-box-sizing: border-box;
             box-sizing: border-box;
-    position: relative;
-  }
-  .first-screen__contacts {
-    position: absolute;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    bottom: 30px;
-    left: 0;
-    right: 0;
-    padding-right: 70px;
+    position: relative;*/
   }
 }
 
@@ -310,10 +299,10 @@ ul.list li::before {
 
 .sticky-header-wrap {
   position: relative;
-  min-height: 50px;
+  min-height: 20px;
 }
 .sticky-header {
-  display: block;
+  opacity: 0;
   background: #efefef;
   padding: 7px 20px;
   display: -webkit-box;
@@ -329,10 +318,12 @@ ul.list li::before {
   top: 0;
   right: 0;
   left: 0;
+  transition: opacity .2s;
 }
 .sticky-header.sticked {
+  opacity: 1;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
 }
 .sticky-header .logo {
   width: 150px;
@@ -464,17 +455,34 @@ ul.list li::before {
   font-size: 24px;
 }
 .company-statistics_text {}
-@media screen and ( min-width: 600px) {
+@media screen and (min-width: 600px) {
   .company-summary {
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: 80px;
+    margin-left: 80px;
   }
   .company-statistics_item {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
 }
-@media screen and ( min-width: 900px) {
+@media screen and (min-width: 800px) {
+  .company-statistics {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+
+  }
+  .company-statistics_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+            align-items: center;
+    justify-content: center;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+}
+@media screen and ( min-width: 1000px) {
   .company-brief {
     background-position: right top;
     background-size: 70% auto;
@@ -487,25 +495,6 @@ ul.list li::before {
     margin-right: 0;
     margin-left: 0;
   }
-  .company-statistics {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-
-  }
-  .company-statistics_item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-align: left;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin-left: 50px;
-  }
   .company-statistics_image {
     margin-right: 20px;
   }
@@ -513,22 +502,45 @@ ul.list li::before {
     font-size: 50px;
     line-height: 1;
   }
+  .company-statistics_item {
+    text-align: left;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-left: 50px;
+  }
   .company-statistics_text {
     font-size: 18px;
   }
 }
-
+@media screen and (min-width: 1500px) {
+  .company-brief {
+    background-position: 75% 0;
+    background-size: 1000px auto;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .company-brief {
+    background-position: 60% 0;
+    background-size: 1000px auto;
+  }
+}
 .company-standards {}
+.company-standards .list{
+  margin-left: 17px;
+}
 .company-standards_image-wrap {
   margin: 0 -20px 20px;
   text-align: center;
 }
+
 .company-standards_image {
   display: inline-block;
   width: 100%;
 }
 .company-standards_text {
   line-height: 1.5;
+  max-width: 700px;
 }
 .company-standards .list {
   margin-bottom: 40px;
@@ -546,24 +558,20 @@ ul.list li::before {
   position: relative;
   margin: 0;
 }
-.technology-block .list::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  background: transparent;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)),to(rgba(255,255,255,0.7)));
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
-}
 .technology-block .list li {
   margin-bottom: 0;
 }
 .technology-slider {
   margin-top: 18px;
+}
+.technology-slider .list li{
+  line-height: 1.3;
+}
+.technology-block .lighter {
+  color: #666;
+}
+.technology-block b {
+  font-weight: bold;
 }
 @media screen and (min-width: 600px) {
   .company-standards_image-wrap {
@@ -594,7 +602,9 @@ ul.list li::before {
   .company-standards_content {
     max-width: 600px;
   }
-
+  .technology-slider {
+    margin-top: 24px;
+  }
 }
 
 .services {
@@ -633,6 +643,9 @@ ul.list li::before {
   background-size: cover;
   color: #fff;
   padding: 30px 0 50px;
+}
+.prices .desktop-visible {
+  display: none;
 }
 .prices .call-to-action {
   line-height: 2;
@@ -702,11 +715,8 @@ ul.list li::before {
 .btn-outline {
   display: inline;
   padding: 10px 17px;
-  border: 2px solid #fff;
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 25px;
+  background-color: transparent;
+
 }
 @media screen and (min-width: 600px){}
 @media screen and (min-width: 900px){
@@ -714,8 +724,10 @@ ul.list li::before {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
   }
+  .prices .desktop-visible {
+    display: inline;
+  }
 }
-@media screen and (min-width: 900px){}
 
 .portfolio {
   padding: 50px 0;
@@ -733,7 +745,6 @@ ul.list li::before {
 }
 .portfolio-project {
   padding-bottom: 40px;
-  width: 50vw;
 }
 .portfolio-project img {
   display: block;
@@ -749,15 +760,12 @@ ul.list li::before {
 }
 @media screen and (min-width: 600px) {
   .portfolio-project {
-    width: 50vw;
   }
 }
 @media screen and (min-width: 900px) {
   .portfolio-project {
-    width: 25vw;
   }
   .portfolio-project-large {
-    width: 50vw;
   }
 }
 
@@ -835,6 +843,7 @@ ul.list li::before {
   background: #fff;
   margin: 50px auto;
   position: relative;
+  box-shadow: 0px 20px 100px rgba(0, 0, 0, 1)
 }
 .modal-content::before {
   content: "";
