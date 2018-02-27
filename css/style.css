@@ -170,6 +170,7 @@ ul.list li::before {
   margin-bottom: 60px;
 }
 .presentation__title {
+  max-width: 370px;
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -264,6 +265,9 @@ ul.list li::before {
 @media screen and (min-width: 600px) {
   .first-screen-galaxy {
     left: -50px;
+  }
+  .presentation__title {
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 1000px) {
