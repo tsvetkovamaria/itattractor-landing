@@ -652,8 +652,8 @@ ul.list li::before {
   }
 }
 .prices {
-  background: #14202b url(../images/lines-new.jpg) top right no-repeat;
-  background-size: cover;
+  background: #14202b url('../images/prices-bg (1).png') -300px 90% no-repeat;
+  /*background-size: cover;*/
   color: #fff;
   padding: 30px 0 50px;
 }
