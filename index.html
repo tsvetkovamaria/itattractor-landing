@@ -409,16 +409,16 @@
       <img src="images/icon-code.svg" alt="">
       <h2>Оrder the project</h2>
     </div>
-    <form class="modal-form">
-      <input type="text" class="input" placeholder="Name">
-      <input type="text" class="input" placeholder="Contact phone or email">
-      <textarea cols="30" rows="5" class="input" placeholder="Something about your project"></textarea>
+    <form class="modal-form" id="request_project">
+      <input id="name" type="text" class="input" placeholder="Name">
+      <input id="phone_or_email" type="text" class="input" placeholder="Contact phone or email">
+      <textarea id="about_project" cols="30" rows="5" class="input" placeholder="Something about your project"></textarea>
       <label class="input-file">
         <span class="input-file_text">
           <i class="fas fa-paperclip"></i>
           <span>Add file</span>
         </span>
-        <input type="file">
+        <input type="file" id="file_input">
       </label>
       <button class="btn btn-primary btn-bordered" type="submit">Send</button>
     </form>
