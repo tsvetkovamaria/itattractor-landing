@@ -118,8 +118,10 @@ $(document).ready(function(){
   });
 
   $(document).click(function(e) {
+      // console.log('will close menu');
+
     var targetIsMenuOrButton = $(e.target).closest('.menu').length || !$(e.target).closest('.menu-toggle').length;
-    if(targetIsMenuOrButton && window.outerWidth < itaLanding.mobileMenuBreakpoint) {
+    if(targetIsMenuOrButton && window.innerWidth < itaLanding.mobileMenuBreakpoint) {
       itaLanding.hideMenu();
       itaLanding.toggleButton.removeClass('open');
     }
