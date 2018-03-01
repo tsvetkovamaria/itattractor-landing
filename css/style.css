@@ -684,13 +684,17 @@ ul.list li::before {
   background-color: transparent;
 
 }
-@media screen and (min-width: 600px){}
 @media screen and (min-width: 900px){
   .price-block {
     flex-basis: 25%;
   }
   .prices .desktop-visible {
     display: inline;
+  }
+}
+@media screen and (min-width: 1500px){
+  .prices {
+    background: #14202b url(../images/prices-bg.png) -300px 90% no-repeat;
   }
 }
 
