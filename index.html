@@ -402,28 +402,31 @@
 </footer>
 <div class="modal">
   <div class="modal-overlay" data-toggle="modal"></div>
-  <div class="modal-content">
-    <span class="modal-close" data-toggle="modal">
-      <i class="fas fa-times"></i>
-    </span>
-    <div class="modal-title">
-      <img src="images/icon-code.svg" alt="">
-      <h2>Оrder the project</h2>
-    </div>
-    <form class="modal-form" id="request_project">
-      <input id="name" type="text" class="input" placeholder="Name">
-      <input id="phone_or_email" type="text" class="input" placeholder="Contact phone or email">
-      <textarea id="about_project" cols="30" rows="5" class="input" placeholder="Something about your project"></textarea>
-      <label class="input-file">
-        <span class="input-file_text">
-          <i class="fas fa-paperclip"></i>
-          <span>Add file</span>
-          <span id="file-name"></span>
+    <div class="modal-content">
+      <div class="modal-inner">
+        <span class="modal-close" data-toggle="modal">
+          <i class="fas fa-times"></i>
         </span>
-        <input type="file" id="file_input">
-      </label>
-      <button class="btn btn-primary btn-bordered" type="submit">Send</button>
-    </form>
+        <div class="modal-title">
+          <img src="images/icon-code.svg" alt="">
+          <h2>Оrder the project</h2>
+        </div>
+        <form class="modal-form" id="request_project">
+          <input id="name" type="text" class="input" placeholder="Name">
+          <input id="phone_or_email" type="text" class="input" placeholder="Contact phone or email">
+          <textarea id="about_project" cols="30" rows="5" class="input" placeholder="Something about your project"></textarea>
+          <label class="input-file">
+            <span class="input-file_text">
+              <i class="fas fa-paperclip"></i>
+              <span>Add file</span>
+              <span id="file-name"></span>
+            </span>
+            <input type="file" id="file_input">
+          </label>
+          <button class="btn btn-primary btn-bordered" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
 </body>
