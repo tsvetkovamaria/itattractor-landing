@@ -1,4 +1,14 @@
+
 $(document).ready(function(){
+  document.body.onload = function(){
+    setTimeout(function(){
+      var preload = document.getElementById('preloader');
+      if(!preloader.classList.contains('done')){
+        preloader.classList.add('done');
+      }
+    }, 1000)
+  };
+
   // Main screen slider
   $('.presentation').slick({
     autoplay: true,
@@ -118,8 +128,6 @@ $(document).ready(function(){
   });
 
   $(document).click(function(e) {
-      // console.log('will close menu');
-
     var targetIsMenuOrButton = $(e.target).closest('.menu').length || !$(e.target).closest('.menu-toggle').length;
     if(targetIsMenuOrButton && window.innerWidth < itaLanding.mobileMenuBreakpoint) {
       itaLanding.hideMenu();
@@ -194,8 +202,10 @@ $(document).ready(function(){
       itaLanding.showFormError();
     })
   })
+
 });
 
+// 
 
 
 
