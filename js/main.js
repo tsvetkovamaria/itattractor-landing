@@ -179,7 +179,13 @@ $(document).ready(function(){
   }
   itaLanding.showFormError = function(){
     $('.modal-title h2').html("Something went wrong, please try again");
+    $('#file-name').html("");
+
   }
+  $('#file_input').on('change', function(e){
+    $('#file-name').html(this.files[0].name);
+  });
+
   document.getElementById('request_project').addEventListener('submit', function (ev) {
     ev.preventDefault();
     var name = document.getElementById('name').value;
