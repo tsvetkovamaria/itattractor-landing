@@ -14,8 +14,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -88,7 +87,9 @@ ul.list li::before {
   padding: 0 18px;
   text-transform: uppercase;
   text-decoration: none;
+  transition: color .3s, -webkit-transform .2s;
   transition: color .3s, transform .2s;
+  transition: color .3s, transform .2s, -webkit-transform .2s;
 }
 .btn-primary:hover {
   background-color: #fff;
@@ -99,7 +100,8 @@ ul.list li::before {
 }
 .btn-primary:active {
   outline: none;
-  transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .btn svg {
@@ -143,14 +145,9 @@ ul.list li::before {
 }
 .first-screen__header {
   padding: 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .first-screen__header .logo {
   min-width: 250px;
@@ -181,8 +178,6 @@ ul.list li::before {
 }
 .dots,
 .dots-dark {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style: none;
   padding: 0;
@@ -199,7 +194,6 @@ ul.list li::before {
   border: 2px solid #fff;
   border-radius: 50%;
   background: transparent;   
-  -webkit-transition: all .3s;   
   transition: all .3s; 
 }
 .dots-dark li {
@@ -217,24 +211,14 @@ ul.list li::before {
   display: none
 }
 .first-screen__contacts {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-wrap: wrap;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 .social-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-wrap: nowrap;
 
 }
 .social-buttons a {
@@ -243,7 +227,6 @@ ul.list li::before {
   font-size: 18px;
   margin: 20px 0 20px 20px;
   opacity: .9;
-  -webkit-transition: all .3s;
   transition: all .3s;
 }
 .social-buttons a:hover {
@@ -313,15 +296,9 @@ ul.list li::before {
   opacity: 0;
   background: #efefef;
   padding: 7px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   top: 0;
   right: 0;
@@ -380,7 +357,6 @@ ul.list li::before {
 .menu-toggle .line {
   -webkit-transform-origin: center center;
           transform-origin: center center;
-  -webkit-transition: all .3s;
   transition: all .3s;
 }
 .menu-toggle.open .line:first-child  { -webkit-transform: translateY(7px) rotate(45deg); transform: translateY(7px) rotate(45deg); }
@@ -448,13 +424,9 @@ ul.list li::before {
 }
 .company-statistics {
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .company-statistics_item {
   min-width: 180px;
@@ -474,26 +446,21 @@ ul.list li::before {
     margin-left: 80px;
   }
   .company-statistics_item {
-    min-width: 150px; 
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    min-width: 150px;
+    flex-basis: 50%;
   }
 }
 @media screen and (min-width: 800px) {
   .company-statistics {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
 
   }
   .company-statistics_item {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
             align-items: center;
     justify-content: center;
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
+    flex-basis: 25%;
   }
 }
 @media screen and ( min-width: 1000px) {
@@ -561,9 +528,7 @@ ul.list li::before {
 }
 .technology-block .dots,
 .technology-slider .dots-dark {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .technology-block .h4 {
   margin-bottom: 20px;
@@ -596,18 +561,11 @@ ul.list li::before {
 }
 @media screen and (min-width: 900px) {
   .company-standards_block {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   .company-standards_block.reverse {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
   .company-standards_image-wrap {
     margin-right: 50px;
@@ -646,17 +604,14 @@ ul.list li::before {
 }
 @media screen and (min-width: 600px) {
   .services-wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .services-block {
-    -ms-flex-preferred-size: 33.3%;
-        flex-basis: 33.3%;
+    flex-basis: 33.3%;
   }
 }
 .prices {
-  background: #14202b url('../images/prices-bg (1).png') -300px 90% no-repeat;
+  background: #14202b url('../images/prices-bg.png') -300px 90% no-repeat;
   /*background-size: cover;*/
   color: #fff;
   padding: 30px 0 50px;
@@ -677,22 +632,16 @@ ul.list li::before {
 }
 .prices-wrap {
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-around;
+  flex-wrap: wrap;
   padding-top: 31px;
   padding-bottom: 33px;
 }
 .price-block {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  flex-basis: 50%;
   padding: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   max-width: 300px;
   min-width: 200px;
   margin-bottom: 14px;
@@ -738,8 +687,7 @@ ul.list li::before {
 @media screen and (min-width: 600px){}
 @media screen and (min-width: 900px){
   .price-block {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
+    flex-basis: 25%;
   }
   .prices .desktop-visible {
     display: inline;
@@ -756,9 +704,7 @@ ul.list li::before {
   margin-bottom: 30px;
 }
 .portfolio .dots-dark {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .portfolio-project {
   padding-bottom: 40px;
@@ -804,18 +750,11 @@ ul.list li::before {
   text-decoration: none;
 }
 .footer_content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   line-height: 30px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 .footer_contacts {
   margin-right: auto;
@@ -831,8 +770,7 @@ ul.list li::before {
 .footer_social .linkedin { color: #0077B5 }
 @media screen and (min-width: 390px) {
   .footer_content {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 }
 .is-modal-open {
@@ -920,8 +858,7 @@ ul.list li::before {
   display: block;
   width: 100%;
   background: #e4e8ee;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: none;
   border-bottom: 2px solid #0079c4;
   margin-bottom: 15px;
@@ -993,7 +930,8 @@ input.input {
   top: 50%;
   left: 50%;
   margin: -25px 0 0 -25px;
-  animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 .preloader.done {
   opacity: 0;
