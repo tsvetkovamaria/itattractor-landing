@@ -694,7 +694,7 @@ ul.list li::before {
 }
 @media screen and (min-width: 1500px){
   .prices {
-    background: #14202b url(../images/prices-bg.png) -300px 90% no-repeat;
+    background: #14202b url(../images/prices-bg.png) 300px 90% no-repeat;
   }
 }
 
