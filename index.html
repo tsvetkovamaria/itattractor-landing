@@ -14,6 +14,16 @@
 </head>
 <body>
   <div class="preloader" id="preloader"><div class="loader"></div></div>
+  <script>
+      document.body.onload = function(){
+        setTimeout(function(){
+          var preload = document.getElementById('preloader');
+          if(!preloader.classList.contains('done')){
+            preloader.classList.add('done');
+          }
+        }, 1000)
+      };
+  </script>
   <div class="first-screen">
     <div class="first-screen-galaxy">
       <img src="uploads/galaxy-xl-min.png" alt="galaxy" width="1537" height="1600">
