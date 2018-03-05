@@ -77,9 +77,6 @@ $(document).ready(function(){
     ]
   })
 
-// $(window).on('orientationchange', function() {
-//   $('.js-slider').slick('resize');
-// });
 
   // mobile menu
   // make sure mobile menu is hidden on first appearance on mobile screens
@@ -168,6 +165,11 @@ $(document).ready(function(){
   itaLanding.showFormSuccess = function(){
     $('.modal-title h2').html("Thank you!<br/> We'll contact you soon!");
     $('#request_project').hide();
+    setTimeout(function(e){
+      $('.modal-title h2').html("Оrder one more project");
+      document.getElementById("request_project").reset();
+      $('#request_project').fadeIn(300);
+    }, 3000);
   }
   itaLanding.showFormError = function(){
     $('.modal-title h2').html("Something went wrong, please try again");
